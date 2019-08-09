@@ -1,0 +1,8 @@
+From devopsedu/webapp
+MAINTAINER Naman Jain <namanj71@gmail.com>
+RUN rm -rf /var/www/html/*
+ADD projCert/website  /var/www/html 
+EXPOSE 80
+##start Apache server
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+
